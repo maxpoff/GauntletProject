@@ -46,7 +46,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <segue destination="Nuq-oM-Klb" kind="show" id="cTL-IG-X55"/>
+                                                    <segue destination="Nuq-oM-Klb" kind="show" identifier="toDetailVC" id="cTL-IG-X55"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

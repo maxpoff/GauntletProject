@@ -78,14 +78,13 @@ class PersonListViewController: UIViewController, UITableViewDataSource, UITable
         self.personListTableView.reloadData()
     }
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toDetailVC" {
+//            guard let indexPath = personListTableView.indexPathForSelectedRow else { return }
+//            let destinationVC = segue.destination as? DetailViewController
+//            let agent = AgentController.sharedInstance.agents[indexPath.row]
+//            destinationVC?.agent = agent
+//        }
+//    }
 }//End of class

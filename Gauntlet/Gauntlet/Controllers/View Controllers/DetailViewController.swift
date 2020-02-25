@@ -13,6 +13,9 @@ class DetailViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var agentImageView: UIImageView!
     
+    //MARK: - Properties
+    var agent: Agent?
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
