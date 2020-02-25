@@ -13,6 +13,7 @@
 		9756F35724058FD600543EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9756F35624058FD600543EA8 /* Assets.xcassets */; };
 		9756F35A24058FD600543EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9756F35824058FD600543EA8 /* LaunchScreen.storyboard */; };
 		9756F36A2405977600543EA8 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756F3692405977600543EA8 /* PersonListViewController.swift */; };
+		9756F36C2405AC7900543EA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756F36B2405AC7900543EA8 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9756F35924058FD600543EA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9756F35B24058FD600543EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9756F3692405977600543EA8 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
+		9756F36B2405AC7900543EA8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				9756F3692405977600543EA8 /* PersonListViewController.swift */,
+				9756F36B2405AC7900543EA8 /* DetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				9756F36A2405977600543EA8 /* PersonListViewController.swift in Sources */,
 				9756F34E24058FD500543EA8 /* AppDelegate.swift in Sources */,
 				9756F35024058FD500543EA8 /* SceneDelegate.swift in Sources */,
+				9756F36C2405AC7900543EA8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

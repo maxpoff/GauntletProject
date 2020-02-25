@@ -17,11 +17,11 @@ class PersonListViewController: UIViewController, UITableViewDataSource, UITable
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setDataAndReload()
         self.navigationController?.isNavigationBarHidden = true
 
         personListTableView.dataSource = self
         personListTableView.delegate = self
+        setDataAndReload()
     }
     
     //MARK: - Properties
