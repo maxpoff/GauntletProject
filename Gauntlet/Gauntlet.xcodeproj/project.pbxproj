@@ -15,6 +15,12 @@
 		9756F36A2405977600543EA8 /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756F3692405977600543EA8 /* PersonListViewController.swift */; };
 		9756F36C2405AC7900543EA8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756F36B2405AC7900543EA8 /* DetailViewController.swift */; };
 		9756F36E2405B1AF00543EA8 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756F36D2405B1AF00543EA8 /* Agent.swift */; };
+		9756F3702405B38900543EA8 /* AgentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756F36F2405B38900543EA8 /* AgentTableViewCell.swift */; };
+		9756F3732405B95300543EA8 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756F3722405B95300543EA8 /* StyleGuide.swift */; };
+		9756F3752405B95F00543EA8 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 9756F3742405B95F00543EA8 /* Fonts */; };
+		9756F3772405B98E00543EA8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9756F3762405B98E00543EA8 /* Colors.xcassets */; };
+		9756F3792405C17C00543EA8 /* UIImageCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756F3782405C17C00543EA8 /* UIImageCodable.swift */; };
+		9756F37B2405C1C300543EA8 /* AgentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9756F37A2405C1C300543EA8 /* AgentController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		9756F3692405977600543EA8 /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 		9756F36B2405AC7900543EA8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9756F36D2405B1AF00543EA8 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		9756F36F2405B38900543EA8 /* AgentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentTableViewCell.swift; sourceTree = "<group>"; };
+		9756F3722405B95300543EA8 /* StyleGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
+		9756F3742405B95F00543EA8 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		9756F3762405B98E00543EA8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9756F3782405C17C00543EA8 /* UIImageCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageCodable.swift; sourceTree = "<group>"; };
+		9756F37A2405C1C300543EA8 /* AgentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 				9756F36124058FFC00543EA8 /* Models */,
 				9756F3622405902100543EA8 /* Controllers */,
 				9756F3652405903400543EA8 /* Views */,
+				9756F3712405B94100543EA8 /* Extensions */,
 				9756F3682405907000543EA8 /* Resources */,
 			);
 			path = Gauntlet;
@@ -97,6 +110,7 @@
 		9756F3642405902F00543EA8 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9756F37A2405C1C300543EA8 /* AgentController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -113,6 +127,7 @@
 		9756F3662405903A00543EA8 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				9756F36F2405B38900543EA8 /* AgentTableViewCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -128,13 +143,24 @@
 		9756F3682405907000543EA8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9756F3742405B95F00543EA8 /* Fonts */,
 				9756F34D24058FD500543EA8 /* AppDelegate.swift */,
 				9756F34F24058FD500543EA8 /* SceneDelegate.swift */,
 				9756F35624058FD600543EA8 /* Assets.xcassets */,
 				9756F35824058FD600543EA8 /* LaunchScreen.storyboard */,
 				9756F35B24058FD600543EA8 /* Info.plist */,
+				9756F3762405B98E00543EA8 /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9756F3712405B94100543EA8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9756F3722405B95300543EA8 /* StyleGuide.swift */,
+				9756F3782405C17C00543EA8 /* UIImageCodable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +221,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9756F3772405B98E00543EA8 /* Colors.xcassets in Resources */,
 				9756F35A24058FD600543EA8 /* LaunchScreen.storyboard in Resources */,
 				9756F35724058FD600543EA8 /* Assets.xcassets in Resources */,
 				9756F35524058FD500543EA8 /* Main.storyboard in Resources */,
+				9756F3752405B95F00543EA8 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9756F3732405B95300543EA8 /* StyleGuide.swift in Sources */,
 				9756F36A2405977600543EA8 /* PersonListViewController.swift in Sources */,
+				9756F3792405C17C00543EA8 /* UIImageCodable.swift in Sources */,
+				9756F37B2405C1C300543EA8 /* AgentController.swift in Sources */,
+				9756F3702405B38900543EA8 /* AgentTableViewCell.swift in Sources */,
 				9756F36E2405B1AF00543EA8 /* Agent.swift in Sources */,
 				9756F34E24058FD500543EA8 /* AppDelegate.swift in Sources */,
 				9756F35024058FD500543EA8 /* SceneDelegate.swift in Sources */,

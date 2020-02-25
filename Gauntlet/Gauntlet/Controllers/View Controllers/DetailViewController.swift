@@ -12,6 +12,11 @@ class DetailViewController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var agentImageView: UIImageView!
+    @IBOutlet weak var agentCodeNameLabel: UILabel!
+    @IBOutlet weak var agentConfirmedKillsLabel: UILabel!
+    @IBOutlet weak var agentSpecialtiesLabel: UILabel!
+    @IBOutlet weak var agentLanguagesLabel: UILabel!
+    @IBOutlet weak var agentNameLabel: UILabel!
     
     //MARK: - Properties
     var agent: Agent?
@@ -29,7 +34,24 @@ class DetailViewController: UIViewController {
     
     //MARK: - Class Methods
     func updateImageView() {
+        
+        guard let agent = agent else {return}
+        
+        let imageName = agent.name
+        
+        agentImageView.image = UIImage(named: imageName)
+        
         self.agentImageView.layer.cornerRadius = self.agentImageView.frame.height/2
+        
+        agentNameLabel.text = agent.name
+        
+        agentCodeNameLabel.text = agent.codeName
+        
+        agentConfirmedKillsLabel.text = "\(agent.confirmedKills)"
+        
+        agentSpecialtiesLabel.text = agent.specialty
+        
+        agentLanguagesLabel.text = agent.language
     }
 
 }//End of class

@@ -18,14 +18,13 @@ class PersonListViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
-
         personListTableView.dataSource = self
         personListTableView.delegate = self
         setDataAndReload()
     }
     
     //MARK: - Properties
-    var dataSource: [String] = []
+    var dataSource = AgentController.sharedInstance.agents
     
     //MARK: - Tableview Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,23 +33,13 @@ class PersonListViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath) as? AgentTableViewCell else {return UITableViewCell()}
         
+        let agent = dataSource[indexPath.row]
         
-        cell.textLabel?.text = dataSource[indexPath.row]
-        cell.imageView?.image = UIImage(named: "TC Funny")
-        
-        
-        if let height = cell.imageView?.frame.height {
-            cell.imageView?.layer.cornerRadius = height/2
-            cell.imageView?.layer.masksToBounds = true
-        }
+        cell.setupCell(agent: agent)
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        self.view.frame.height / 3
     }
     
     //MARK: - Actions
@@ -64,27 +53,27 @@ class PersonListViewController: UIViewController, UITableViewDataSource, UITable
         switch personSegmentControl.selectedSegmentIndex {
             
         case 0:
-            dataSource = ["Anna", "Nathan"]
+            dataSource = AgentController.sharedInstance.uxAgents
             
         case 1:
-            dataSource = ["Meeta", "Clay", "Charles"]
+            dataSource = AgentController.sharedInstance.qaAgents
             
         case 2:
-            dataSource = ["Adam", "Nicholas", "Poff"]
+            dataSource = AgentController.sharedInstance.iosAgents
             
         default:
-            dataSource = [""]
+            dataSource = []
         }
         self.personListTableView.reloadData()
     }
 
     // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toDetailVC" {
-//            guard let indexPath = personListTableView.indexPathForSelectedRow else { return }
-//            let destinationVC = segue.destination as? DetailViewController
-//            let agent = AgentController.sharedInstance.agents[indexPath.row]
-//            destinationVC?.agent = agent
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC" {
+            guard let indexPath = personListTableView.indexPathForSelectedRow else { return }
+            let destinationVC = segue.destination as? DetailViewController
+            let agent = dataSource[indexPath.row]
+            destinationVC?.agent = agent
+        }
+    }
 }//End of class
