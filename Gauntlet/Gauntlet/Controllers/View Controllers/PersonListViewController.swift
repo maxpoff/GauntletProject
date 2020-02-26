@@ -23,6 +23,11 @@ class PersonListViewController: UIViewController, UITableViewDataSource, UITable
         setDataAndReload()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setDataAndReload()
+    }
+    
     //MARK: - Properties
     var dataSource = AgentController.sharedInstance.agents
     
